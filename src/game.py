@@ -21,6 +21,8 @@ for row in range(3):
     for column in range(3):
         grid[row].append(0)  # Append a cell
 
+grid = [[0 for x in range(3)] for y in range(3)]
+
 pygame.init()
 # initialize pygame
 
@@ -28,6 +30,29 @@ pygame.init()
 window_size = [255, 255]
 screen = pygame.display.set_mode(window_size)
 
+pygame.display.set_caption("TIC TAC TOE")
+# Makes title for the game
+
+
+
+screen.fill(White)
+#set screen with a white background
+
+for row in range(3):
+    for column in range(3):
+        color = Black
+        if grid [row][column] == 1:
+            color = Pink
+        pygame.draw.rect(screen,
+                         color,
+                         [(margin + width) * column + margin,
+                              (margin + height) * row + margin,
+                              width,
+                              height])
+#drawing the grid
+
+     # update the screen with what we've drawn
+    pygame.display.flip()
 
 
 
