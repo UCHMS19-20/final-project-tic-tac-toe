@@ -8,4 +8,9 @@ White = (255, 255, 255)
 Light Coral = (240, 128, 128)
 Indian Red = (205, 92, 92)
 
+width = 3
+height = 3
+
+margin = 0.1
+
 
