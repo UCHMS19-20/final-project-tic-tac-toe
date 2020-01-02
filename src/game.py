@@ -51,8 +51,8 @@ for row in range(3):
                               height])
 #drawing the grid
 
-     # update the screen with what we've drawn
-    pygame.display.flip()
+     # update the screen with what has been drawn
+    pygame.display.flip() 
 
 
 
