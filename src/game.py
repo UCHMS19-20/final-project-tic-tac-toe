@@ -14,11 +14,11 @@ height = 3
 margin = 0.1
 
 grid = []
-for row in range(10):
+for row in range(3):
     # Added an empty array to hold each cell
     # in this row
     grid.append([])
-    for column in range(10):
+    for column in range(3):
         grid[row].append(0)  # Append a cell
 
 pygame.init()
@@ -27,6 +27,8 @@ pygame.init()
 # Set the HEIGHT and WIDTH of the screen
 window_size = [255, 255]
 screen = pygame.display.set_mode(window_size)
+
+
 
 
 
