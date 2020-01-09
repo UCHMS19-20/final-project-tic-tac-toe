@@ -1,66 +1,44 @@
-print("Welcome to our game of Tic Tac Toe")
-
 import pygame
 import sys
 
-Black = (0, 0, 0)
-White = (255, 255, 255)
-Pink = (240, 128, 128)
-DPink = (205, 92, 92)
-
-width = 3
-height = 3
-
-margin = 0.1
+width, height = 600, 600
+cell_count = 3
+cell_size = width/cell_count
 
 grid = []
-for row in range(3):
-    # Added an empty array to hold each cell
-    # in this row
-    grid.append([])
-    for column in range(3):
-        grid[row].append(0)  # Append a cell
 
-grid = [[0 for x in range(3)] for y in range(3)]
+class Cell:
+
+    def __init__(self, x, y, sz):
+        self.x = x
+        self.y = y
+        self.sz = sz
+        self.filled = False
+        self.rectangle = pygame.Rect(self.x * sz, self.y * sz, sz, sz)
+
+    def show(self):
+        pygame.draw.rect(screen, pygame.Color("pink"), self.rectangle, 2)
+        if self.filled:
+            pygame.draw.rect(screen, pygame.Color("pink"), self.rectangle)
 
 pygame.init()
-# initialize pygame
 
-# Set the HEIGHT and WIDTH of the screen
-window_size = [255, 255]
-screen = pygame.display.set_mode(window_size)
+screen = pygame.display.set_mode((width, height))
 
-pygame.display.set_caption("TIC TAC TOE")
-# Makes title for the game
+for y in range(cell_count):
+    for x in range(cell_count):
+        grid.append(Cell(x, y, cell_size))
+
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            sys.exit()
+
+    # pygame.draw.rect(screen, pygame.Color("red"), (0,0,50,50))
+    for cell in grid:
+        if cell.rectangle.collidepoint(pygame.mouse.get_pos()):
+            cell.filled = True
+        cell.show()
 
 
-
-<<<<<<< HEAD
-=======
-screen.fill(White)
-#set screen with a white background
->>>>>>> parent of 805204c... Update game.py
-
-for row in range(3):
-    for column in range(3):
-        color = Black
-        if grid [row][column] == 1:
-            color = Pink
-        pygame.draw.rect(screen,
-                         color,
-                         [(margin + width) * column + margin,
-                              (margin + height) * row + margin,
-                              width,
-                              height])
-#drawing the grid
-
-<<<<<<< HEAD
     pygame.display.flip() 
-=======
-     # update the screen with what has been drawn
-    pygame.display.flip() 
-
-
-
-
->>>>>>> parent of 805204c... Update game.py
