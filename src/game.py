@@ -24,3 +24,10 @@ def __init__board(abc):
     # drawing horizontal lines for the grid
     return background
     # returns a drawn board
+
+    def board_postion(x_click, y_click):
+        """the mouse gives coordinates to figure out
+         the space on the board (row, column) the user clicked
+         x_click = x coordinate & y_click = y coordinate  """
+
+
