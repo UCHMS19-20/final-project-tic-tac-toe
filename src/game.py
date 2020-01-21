@@ -64,6 +64,7 @@ def draw_move(board, b_row, b_col, piece):
 
         grid[b_row][b_col] = piece
 # marks space as used
+
 def click_Board(board):
    """determine where the user clicked and if the
     space is not already occupied, draw the appropriate
@@ -151,6 +152,3 @@ while (running == 1):
  
        # update the display
        show_board (abc, board)
-
-
-
