@@ -11,9 +11,9 @@ winner = None
 def __init__board(abc):
     """init = initialize ; board is initialized and turned into a variable; 
     "abc" is the pygame display variable"""
-    background = pygame.surface(abc.get_size())
+    background = pygame.Surface(abc.get_size())
     background = background.convert()
-    background.fill = ((153,0,153))
+    background.fill = ((250,250,250))
     # sets the background of the game a light purple color
 
     pygame.draw.line(background, (0,0,0), (100,0), (100,300), 2)
@@ -141,14 +141,14 @@ running = 1
  
 while (running == 1):
    for event in pygame.event.get():
-       if event.type is QUIT:
+       if event.type is quit:
            running = 0
-       elif event.type is MOUSEBUTTONDOWN:
+       elif event.type is mousebuttondown:
            # the user clicked; place an X or O
-           clickBoard(board)
+           click_Board(board)
  
        # check for a winner
        game_won (board)
  
        # update the display
-       show_board (abc, board)
+       show_board(abc, board)
