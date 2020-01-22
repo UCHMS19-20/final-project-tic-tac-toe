@@ -1,8 +1,4 @@
 import pygame
-<<<<<<< HEAD
-
-=======
->>>>>>> c8a9f9c1d14022b66b7ca69dfbe5a72e3d09581f
 
 X1 = "x"
 # tells the turn; X1 means "x" goes first
@@ -67,9 +63,6 @@ def draw_move(board, b_row, b_col, piece):
 # draws pieces X or O
 
         grid[b_row][b_col] = piece
-<<<<<<< HEAD
-# marks space as used
-=======
 # marks space as used
 
 def click_Board(board):
@@ -159,4 +152,3 @@ while (running == 1):
  
        # update the display
        show_board(abc, board)
->>>>>>> c8a9f9c1d14022b66b7ca69dfbe5a72e3d09581f
