@@ -1,5 +1,6 @@
 import pygame
 <<<<<<< HEAD
+<<<<<<< HEAD
 # marks space as used
 
 def click_Board(board):
@@ -90,6 +91,8 @@ while (running == 1):
        # update the display
        show_board(abc, board)
 =======
+=======
+>>>>>>> parent of abe56aa... Update game.py
 
 
 X1 = "x"
@@ -155,5 +158,9 @@ def draw_move(board, b_row, b_col, piece):
 # draws pieces X or O
 
         grid[b_row][b_col] = piece
+<<<<<<< HEAD
+# marks space as used
+>>>>>>> parent of abe56aa... Update game.py
+=======
 # marks space as used
 >>>>>>> parent of abe56aa... Update game.py
