@@ -1,4 +1,3 @@
-import sys
 import pygame
 
 # Initialize pygame so it runs in the background and manages things
