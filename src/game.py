@@ -23,11 +23,11 @@ def init_board(abc):
     #creating the grid
     #drawing the vertical lines
     pygame.draw.line(background, (250,250,250), (100,0), (100,300), 2)
-    pygame.draw.line(background, (250,250,250), (100,0), (200,300), 2)
+    pygame.draw.line(background, (250,250,250), (200,0), (200,300), 2)
     
     # drawing horizontal lines
     pygame.draw.line(background, (250,250,250), (0,100), (300,100), 2)
-    pygame.draw.line(background, (250,250,250), (0,100), (300,200), 2)
+    pygame.draw.line(background, (250,250,250), (0,200), (300,200), 2)
     
     return background
     # returns a drawn board ^^
