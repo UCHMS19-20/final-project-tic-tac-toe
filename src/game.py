@@ -32,34 +32,38 @@ def init_board(abc):
     return background
     # returns a drawn board ^^
 
+def show_board (abc, board):
+    abc.blit (board, (0, 0))
+    pygame.display.flip()
 
-def board_postion (x_click, y_click):
+
+def board_postion (mouseX, mouseY):
         """the mouse gives coordinates to figure out
          the space on the board (row, column) the user clicked
          x_click = x coordinate & y_click = y coordinate  """
-        if (y_click < 100):
+        if (mouseY < 100):
                 row = 0
-        elif (y_click < 200):
+        elif (mouseY < 200):
                 row = 1
         else:
                 row = 2
 # shows the row clicked by the player ^^
-        if (x_click < 100):
+        if (mouseX < 100):
                 column = 0
-        elif (x_click < 200):
+        elif (mouseX < 200):
                 column = 1
         else:
                 column = 2
 # shows the column clicked by the player ^^
         return (row, col)
 
-def draw_move(board, b_row, b_col, piece):
+def draw_move(board, boardrow, boardcol, piece):
         """ board = surface of game,
-         b_row & b_col = row and column to draw the piece, 
+         boardrow & boardcol = row and column to draw the piece, 
          piece = X or O"""
 
-        middle_X = ((b_col) * 100) + 50
-        middle_Y = ((b_row) * 100) + 50
+        middle_X = ((boardcol) * 100) + 50
+        middle_Y = ((boardrow) * 100) + 50
 # shows center of the square board ^^
 
         if (piece == 'O'):
@@ -71,7 +75,7 @@ def draw_move(board, b_row, b_col, piece):
                         (middle_X - 22, middle_Y + 22), 2)
 # draws pieces X or O
 
-        grid[b_row][b_col] = piece
+        grid[boardrow][boardcol] = piece
 # marks space as used
 
 def click_Board(board):
@@ -81,8 +85,8 @@ def click_Board(board):
   
    global grid, XO
   
-   (x_click, y_click) = pygame.mouse.get_pos()
-   (row, col) = board_position(x_click, y_click)
+   (mouseX, mouseY) = pygame.mouse.get_pos()
+   (row, col) = board_position(mouseX, mouseY)
  
    # makes sure no used the space
    if ((grid[row][col] == "X") or (grid[row][col] == "O")):
