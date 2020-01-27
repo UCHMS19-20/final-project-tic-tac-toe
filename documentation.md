@@ -3,11 +3,6 @@
 The game that my partner Sophia and I chose to create is Tic Tac Toe. In Tic Tac Toe two players play against each other as X's and O.s. The game is played on a 3x3 grid and each player takes a turn placing their piece. Whoever is first to place three of their pieces in a row vertically, horizontally, or diagonally wins the game. 
 
 
-
-### Flowchart
-
-https://docs.google.com/drawings/d/1s0IdsOjAK4LnzpzRKB0VN9uPEjv313rcNR2g7-6CuuM/edit
-
 ### Code
 
 import pygame
